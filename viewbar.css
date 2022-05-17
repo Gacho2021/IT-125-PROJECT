@@ -1,0 +1,28 @@
+/**
+ * viewbar
+ */
+div.qf-viewbar {
+  margin-top: 37px;
+}
+div.qf-viewbar h3 {
+  color: #064167;
+  font-size: 17px;
+  margin: 7px 0;
+}
+div.qf-viewbar h3 a {
+  color: #064167;
+  font-size: 12px;
+  line-height: 17px;
+  float: right;
+  clear: right;
+}
+div.qf-viewbar h3 a:hover {
+  text-decoration: underline;
+}
+div.qf-viewbar h3 a:after {
+  content: '\e80f';
+  color: #0095a8;
+  font-family: 'icon-th';
+  font-size: 10px;
+  margin: 0 5px;
+}

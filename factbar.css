@@ -1,0 +1,53 @@
+/**
+ * factbar
+ */
+div.qf-factbar {
+  position: relative;
+  color: #064167;
+  background: #e7eaed;
+  border-bottom: 1px solid #b7c0ca;
+  margin: 0;
+  padding: 0;
+  min-height: 38px;
+  max-height: 54px;
+}
+div.qf-factbar h2 {
+  font-size: 13px;
+  line-height: 38px;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+div.qf-factbar h2 a.headnote {
+  margin-left: 10px;
+  font-size: 12px;
+  line-height: 38px;
+}
+div.qf-factbar div {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: perspective(1px) translateY(-50%);
+}
+div.qf-factbar div input[type=checkbox] {
+  display: none;
+}
+div.qf-factbar div input[type=checkbox] + label {
+  cursor: pointer;
+  font-size: 13px;
+  line-height: 15px;
+  font-weight: bold;
+}
+div.qf-factbar div input[type=checkbox] + label:before {
+  font-family: 'icon-th' !important;
+  display: inline-block;
+  content: '\e81d';
+  color: #ff7043;
+  font-size: 15px;
+  line-height: 15px;
+  font-weight: bold;
+  width: 20px;
+}
+div.qf-factbar div input[type=checkbox]:checked + label:before {
+  content: '\f096';
+}

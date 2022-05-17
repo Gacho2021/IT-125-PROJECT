@@ -1,0 +1,51 @@
+/**
+ * titlebar fragment formatting
+ */
+div.qf-titlebar {
+  padding: 0 1em;
+}
+div.qf-titlebar h1 {
+  color: #112E51;
+  font-size: 18px;
+  margin: 0.25em 0 0.15em 0;
+}
+div.qf-titlebar h2 {
+  color: #112E51;
+  font-size: 15px;
+  margin: 0.15em 0 0 0;
+}
+div.qf-titlebar p {
+  font-size: 12px;
+  margin: 10px 0;
+}
+div.qf-titlebar h2 span {
+  color: #ff7043;
+  font-size: 12px;
+}
+div.qf-titlebar div.qf-learn {
+  display: inline-block;
+  float: right;
+  top: 0;
+  right: 0;
+}
+div.qf-titlebar div.qf-learn a {
+  display: block;
+  color: #064167;
+  font-size: 13px;
+  line-height: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: right;
+}
+div.qf-titlebar div.qf-learn a:hover {
+  text-decoration: underline;
+}
+div.qf-titlebar div.qf-learn a:after {
+  font-family: "icon-th" !important;
+  content: '\e80f';
+  color: #0095a8;
+  font-size: 13px;
+  line-height: 15px;
+  font-weight: bold;
+  margin-left: 5px;
+}

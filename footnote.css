@@ -1,0 +1,96 @@
+/**
+ * fotenote fragment formatting
+ */
+div.qf-footnotes {
+  background: #edeff0;
+  padding: 1em;
+  margin-top: 1em;
+}
+div.qf-footnotes * {
+  font-size: 12px !important;
+}
+div.qf-footnotes #qf-table-link {
+  margin-bottom: 1em;
+}
+div.qf-footnotes ul {
+  list-style: none;
+  margin-left: 2em;
+}
+div.qf-footnotes ul li a:not([class="note"]) {
+  display: inline-block;
+  color: #000000;
+  font-weight: bold;
+  margin-right: 1em;
+  width: 20px;
+  text-decoration: none;
+}
+div.qf-footnotes ul li a:focus {
+  color: #ffffff;
+  background: #4b636e;
+}
+div.qf-footnotes ul#qf-note li span {
+  display: inline-block;
+  margin-right: 1em;
+  line-height: 100%;
+}
+div.qf-footnotes ul#qf-note li span a {
+  display: inline-block;
+  color: #000000;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 100%;
+  text-decoration: none;
+}
+div.qf-footnotes ul#qf-note li span a:after {
+  content: '.';
+}
+div.qf-footnotes dl#qf-definitions dt {
+  display: inline-block;
+  min-width: 100px;
+  font-weight: bold;
+}
+div.qf-footnotes dl#qf-definitions dd {
+  display: inline;
+}
+div.qf-footnotes dl#qf-definitions dd:after {
+  display: block;
+  content: '';
+}
+div.qf-footnotes div#qf-sampling-error p span.help:before,
+div.qf-footnotes div#qf-sampling-error p span.help:before {
+  color: #0095a8;
+  /* color: #ff7043; */
+}
+div.qf-footnotes #qf-sourcenote-icon {
+  position: relative;
+  display: inline-block;
+  height: 14px;
+  margin-right: 1.5em;
+}
+div.qf-footnotes #qf-sourcenote-icon span.top {
+  position: absolute;
+  display: inline-block;
+  color: #c6d9f1;
+  font-family: "icon-th" !important;
+  width: 1em;
+  height: 14px;
+}
+div.qf-footnotes #qf-sourcenote-icon span.bottom {
+  position: absolute;
+  display: inline-block;
+  color: #000000;
+  font-family: "icon-th" !important;
+  width: 1em;
+  height: 14px;
+}
+div.qf-footnotes #qf-quickinfo-icon {
+  display: inline-block;
+  color: #0095a8;
+  font-family: "icon-th" !important;
+  width: 1em;
+  height: 14px;
+}
+
+div.qf-footnotes p {
+  margin-top: 1em;
+}

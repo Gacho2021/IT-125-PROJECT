@@ -1,0 +1,244 @@
+/**
+ * jsmap
+ */
+div.qf-jsmap {
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  height: 600px;
+  z-index: 0;
+  background: #cccccc;
+}
+div.qf-jsmap div#qf-map-base {
+  width: 100%;
+  height: 100%;
+}
+
+div.qf-jsmap div#qf-map-loadbar {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  z-index: 5;
+  background: linear-gradient(90deg, #ff7043, #e3ff00, #ff7043);
+  background-size: 600% 600%;
+  -webkit-animation: loadbar 8s ease infinite;
+  -moz-animation: loadbar 8s ease infinite;
+  -o-animation: loadbar 8s ease infinite;
+  animation: loadbar 8s ease infinite;
+}
+@-webkit-keyframes loadbar {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes loadbar {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-o-keyframes loadbar {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes loadbar {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+div.qf-jsmap div#qf-map-title,
+div.qf-jsmap div#qf-map-quantile {
+  display: none;
+  position: absolute;
+  left: calc(50% - 500px);
+  width: 1000px;
+  z-index: 3;  
+}
+div.qf-jsmap div#qf-map-title {
+  top: 0;
+  height: 40px;
+}
+div.qf-jsmap div#qf-map-quantile {
+  bottom: 0;
+  height: 80px;
+}
+div.qf-jsmap:fullscreen div#qf-map-title,
+div.qf-jsmap:fullscreen div#qf-map-quantile {
+  display: block;
+  background: #edeff0;
+  filter: drop-shadow(0 0 10px #000);
+}
+div.qf-jsmap:-ms-fullscreen div#qf-map-title,
+div.qf-jsmap:-ms-fullscreen div#qf-map-quantile {
+  display: block;
+  background: #edeff0;
+  filter: drop-shadow(0 0 10px #000);
+}
+div.qf-jsmap:-moz-full-screen div#qf-map-title,
+div.qf-jsmap:-moz-full-screen div#qf-map-quantile {
+  display: block;
+  background: #edeff0;
+  filter: drop-shadow(0 0 10px #000);
+}
+div.qf-jsmap:-webkit-full-screen div#qf-map-title,
+div.qf-jsmap:-webkit-full-screen div#qf-map-quantile {
+  display: block;
+  background: #edeff0;
+  filter: drop-shadow(0 0 10px #000);
+}
+
+div.qf-jsmap div#qf-map-info {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 500px;
+  height: 100%;
+  z-index: 4;
+}
+div.qf-jsmap div#qf-map-info > div:first-child {
+  overflow: hidden;
+  background: #fff;
+}
+div.qf-jsmap div#qf-map-info > div:first-child,
+div.qf-jsmap div#qf-map-info > div:first-child > div {
+  display: inline-block !important;
+  width: 470px;
+  height: 100%;
+}
+div.qf-jsmap div#qf-map-info > div:first-child > div {
+  padding: 10px;
+  border-left: 1px solid #cccccc;
+}
+div.qf-jsmap div#qf-map-info div.icon-right-open,
+div.qf-jsmap div#qf-map-info div.icon-left-open {
+  cursor: pointer;
+  display: inline-block !important;
+  width: 24px;
+  height: 24px;
+  padding: 0 0 0 24px;
+  margin: auto 0;
+}
+div.qf-jsmap div#qf-map-info div.icon-right-open span,
+div.qf-jsmap div#qf-map-info div.icon-left-open span {
+  display: inline-block !important;
+  font-family: "icon-th" !important;
+  color: #ff7043 !important;
+  font-size: 23px;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  margin: auto 0 auto -24px;
+}
+div.qf-jsmap div#qf-map-info > div:first-child > div > div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin: 10px 0;
+}
+div.qf-jsmap div#qf-map-info > div:first-child > div > div > a:first-child {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 5px;
+  line-height: 40px;
+}
+div.qf-jsmap div#qf-map-info > div:first-child > div > div > a:first-child > object {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: 40px 40px;
+  width: 40px;
+  height: 40px;
+  margin-right: -45px;
+}
+div.qf-jsmap div#qf-map-info > div:first-child > div > div > a:first-child > div {
+  display: flex !important;
+  flex-direction: column;
+  display: inline-block;
+  height: 40px;
+  padding-left: 50px;
+}
+div.qf-jsmap div#qf-map-info > div:first-child > div > div > a:first-child > div > * {
+  display: inline-block;
+  line-height: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 150px;
+  white-space: nowrap;
+}
+div.qf-jsmap div#qf-map-info  > div:first-child > div > div > a.qf-map-remove {
+  font-family: "icon-th" !important;
+  display: flex !important;
+  flex-direction: column;
+  align-items: flex-start;
+  display: inline-block;
+  height: 40px;
+}
+div.qf-jsmap div#qf-map-info  > div:first-child > div > div > div.qf-sourcenote {
+  display: flex !important;
+  flex-direction: column;
+  align-items: flex-end;
+  display: inline-block;
+  height: 40px;
+  margin-right: 0;
+}
+div.qf-jsmap div#qf-map-info  > div:first-child > div > div > div.qf-sourcenote * {
+  bottom: 3px !important;
+}
+
+div.qf-jsmap:fullscreen div#qf-map-info {
+  filter: drop-shadow(0 0 10px #000);  
+}
+div.qf-jsmap:-ms-fullscreen div#qf-map-info {
+  filter: drop-shadow(0 0 10px #000);  
+}
+div.qf-jsmap:-moz-full-screen div#qf-map-info {
+  filter: drop-shadow(0 0 10px #000);  
+}
+div.qf-jsmap:-webkit-full-screen div#qf-map-info {
+  filter: drop-shadow(0 0 10px #000);  
+}
+
+div.qf-jsmap div.mapboxgl-popup-content div.qf-sourcenote {
+  margin-left: 10px;
+}
+div.qf-jsmap div.mapboxgl-popup-content div.qf-infowindow-controls {
+  min-width: 190px;
+  max-width: 360px;
+  margin-top: 10px;
+  padding: 5px 0;
+}
+div.qf-jsmap div.mapboxgl-popup-content div.qf-infowindow-controls button {
+  display: block;
+  float: left;
+  color: #ffffff;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+  width: 90px;
+  height: 50px;
+  margin: 0 5px 5px 0;
+  background-color: #1b6a95;
+  border: none;
+  cursor: pointer;
+}
+div.qf-jsmap div.mapboxgl-popup-content div.qf-infowindow-controls button[data-action] {
+  background-color: #0095a8;
+}
+div.qf-jsmap div.mapboxgl-popup-content div.qf-infowindow-controls button[data-action="0"] {
+  color: #ffffff;
+  background-color: #666666;
+  cursor: default;
+}
+
+div.qf-jsmap button.mapboxgl-ctrl,
+div.qf-jsmap button.mapboxgl-ctrl-icon {
+  font-weight: bold;
+}
